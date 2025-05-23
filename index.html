@@ -2,46 +2,144 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Daily Web Projects</title>
+  <title>Vikram Choudhary | Daily Web Projects</title>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      background-color: black;
-      color: white;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f0f;
+      color: #f1f1f1;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background: #1a1a1a;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+      margin-bottom: 50px;
+    }
+
+    .details {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .details h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #00bfff;
+    }
+
+    .details p {
+      font-size: 16px;
+      margin: 8px 0;
+      color: #ccc;
+    }
+
+    .photo {
       text-align: center;
-      padding: 50px;
+    }
+
+    .photo img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #00bfff;
+      box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
     }
 
     h1 {
-      margin-bottom: 40px;
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #00bfff;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
     }
 
     .btn {
-      background-color: #3498db;
-      color: white;
+      background: linear-gradient(135deg, #00bfff, #1e90ff);
       border: none;
+      color: white;
       padding: 15px 30px;
-      margin: 10px;
       font-size: 18px;
+      border-radius: 12px;
       cursor: pointer;
-      border-radius: 8px;
-      transition: background-color 0.3s;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3);
     }
 
     .btn:hover {
-      background-color: #2980b9;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 191, 255, 0.6);
+    }
+
+    @media (max-width: 768px) {
+      .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+      }
+
+      .buttons {
+        gap: 15px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1>My Daily Website Projects</h1>
+  <div class="container">
 
-  <button class="btn" onclick="window.location.href='https://vikramday1.vercel.app/'">Day 1</button>
-  <button class="btn" onclick="window.location.href='https://vikramday2.vercel.app/'">Day 2</button>
-  <button class="btn" onclick="window.location.href='https://vikramday3.vercel.app/'">Day 3</button>
-  <button class="btn" onclick="window.location.href='https://vikramday4.vercel.app/'">Day 4</button>
-  <button class="btn" onclick="window.location.href='https://vikramday5.vercel.app/'">Day 5</button>
+    <!-- Top Section with Details and Photo -->
+    <div class="profile">
+      <div class="details">
+        <h2>Vikram Choudhary</h2>
+        <p><strong>Location:</strong> Vasai, Mumbai, Maharashtra</p>
+        <p><strong>Phone:</strong> +91 8600314243</p>
+        <p><strong>Email:</strong> vikramchoudhary3107.com</p>
+      </div>
+      <div class="photo">
+        <img src="your-photo.jpeg" alt="Vikram Choudhary">
+      </div>
+    </div>
+
+    <!-- Heading -->
+    <h1>My Daily Website Projects</h1>
+
+    <!-- Day Buttons -->
+    <div class="buttons">
+      <button class="btn" onclick="window.location.href='https://vikramday1.vercel.app/'">Day 1</button>
+      <button class="btn" onclick="window.location.href='https://vikramday2.vercel.app/'">Day 2</button>
+      <button class="btn" onclick="window.location.href='https://vikramday3.vercel.app/'">Day 3</button>
+      <button class="btn" onclick="window.location.href='https://vikramday4.vercel.app/'">Day 4</button>
+      <button class="btn" onclick="window.location.href='https://vikramday5.vercel.app/'">Day 5</button>
+    </div>
+
+  </div>
 
 </body>
 </html>
